@@ -43,6 +43,14 @@
 #define RTSYN_ENGINE_DEFAULT_RT_THREAD_INHERITSCHED          PTHREAD_EXPLICIT_SCHED
 
 /**
+ * @brief Default Linux CPU-idle exit-latency PM QoS request, in microseconds.
+ *
+ * The PREEMPT_RT thread backend applies this request by default. Set the
+ * environment variable `RTSYN_CPU_DMA_LATENCY_US=off` to opt out at runtime.
+ */
+#define RTSYN_ENGINE_DEFAULT_CPU_DMA_LATENCY_US              0
+
+/**
  * @brief Default pthread scheduling policy for the engine wait thread.
  *
  * The wait thread is not part of the realtime execution path.
